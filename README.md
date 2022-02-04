@@ -8,6 +8,7 @@ All weather data was retrieved using the OpenWeatherMap API, which can be found 
 * How to retrieve data from an API and parse it.
 * How to use Node.js and Express to create a web application.
 * Make websites responsive for better use across different platforms.
+* How to deploy an app to Heroku
 
 ### Next Steps:
 * I would like to add functionality to the site such that the user's location is requested, and if allowed, searched for immediately, instead of a mostly empty page being present when first visiting the site.
