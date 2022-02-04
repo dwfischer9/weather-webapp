@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Weather</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=yes"
+    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/office/16/000000/sunset--v2.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    
+  </head>
+
+  <body>
+      <!-- Main container -->
+<div class="container">
+
+    <!-- This shall hold the input fields and the output data -->
+    <fieldset>
+      <!-- This form shall be used to fetch your city name -->
+      <form action="/" method="post">
+        <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
+        <input type="submit" class="ghost-button" value="Get Weather">
+      </form>
+      <!-- Upon fetching of data you will display it -->
+      <%if( weather !== null){ %>
+        <p>Here's the weather in <%= place %></p>
+        <p class="timezone"><%= timezone %></p>
+      <!-- You can find other data fetched by the app on the console in JSON form and display it as you please -->
+      <div class="grid-container">
+        <div class="griditem1">
+          <h3 class="category-header">Summary</h3>
+            <img src="<%= icon %>" alt="Weather-Icon">
+            <h5 class="title">Temperature</h5>
+            <p class="text"><%= temp %>°C/<%= fahrenheit %>°F</p>
+            <h5 class="title">Feels Like</h5>
+            <p class="text"><%= feels_like %>°C/<%= feels_like_fah %>°F</p>
+          </div>
+          <div class="griditem2">
+            <h3 class="category-header">Description</h3>
+              <h5 class="title">Overall Description: </h5>
+              <p class="text"><%= description %></p>
+              <h5 class="title">Cloud coverage: </h5>
+              <p class="text"><%= clouds %>%</p>
+              <h5 class="title">Visibility: </h5>
+              <p class="text"><%= visibility %> meters</p>
+            </div>
+          <div class="griditem3">
+           <h3 class="category-header">Other info</h3>
+              <h5 class="title">Humidity: </h5>
+                <p class="text"><%= humidity %> g.m-3</p>
+              <h5 class="title">Pressure: </h5>
+                <p class="text"><%= pressure %> N·m−2</p>
+              <% } %><% if(error !== null){ %>
+          <p><%= error %></p><% } %>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  </body>
+</div>
+<script>function darkMode() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+  element1.classList.toggle("contact-dark")
+}</script>
+</html>
