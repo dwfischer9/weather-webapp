@@ -11,3 +11,5 @@ All weather data was retrieved using the OpenWeatherMap API, which can be found 
 
 ### Next Steps:
 * I would like to add functionality to the site such that the user's location is requested, and if allowed, searched for immediately, instead of a mostly empty page being present when first visiting the site.
+
+#### Note: All source code is present, except for the OpenWeatherMap API key, for privacy and safety reasons.
