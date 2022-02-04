@@ -4,8 +4,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
 const app = express();
-app.set("port",'8080');
-
+var port = process.env.PORT || 8000
+app.listen(port)
+console.log('server started ' + port)
 // Configure dotenv package
 
 require('dotenv').config();
